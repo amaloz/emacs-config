@@ -13,7 +13,9 @@
 (load "config/global")
 
 (load "config/prog")
-(load "config/auctex")
+
+; specific modules
+(load "config/latex")
 (load "config/ocaml")
 
 ; start up emacs server

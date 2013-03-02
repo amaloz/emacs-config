@@ -1,3 +1,5 @@
+;; global config
+;; 02 March 2013
 
 (setq-default indent-tabs-mode nil)     ; use spaces for tabs
 (setq make-backup-files nil)            ; disable backup files

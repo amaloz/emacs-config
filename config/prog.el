@@ -1,6 +1,8 @@
 ; prog-mode configuration
 ; 02 March 2013
 
+(amaloz-ensure-module-deps '(guru-mode))
+
 (defun prog-add-watchwords ()
   (font-lock-add-keywords
    nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\):"
