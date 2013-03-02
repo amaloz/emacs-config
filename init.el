@@ -6,8 +6,15 @@
 (setq custom-file "~/.emacs.d/config/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
 
+(load "config/packages")
+(load "config/ui")
+(load "config/funs")
+(load "config/mode")
 (load "config/global")
+
+(load "config/prog")
 (load "config/auctex")
+(load "config/ocaml")
 
 ; start up emacs server
-(server-start)
+;; (server-start)

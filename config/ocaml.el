@@ -1,5 +1,5 @@
-; OCaml config
-; 01 March 2013
+;; OCaml config
+;; 01 March 2013
 
 (add-hook 'tuareg-mode-hook
           (lambda ()

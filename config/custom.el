@@ -5,14 +5,9 @@
  ;; If there is more than one, they won't work right.
  '(TeX-PDF-mode t)
  '(ansi-color-names-vector ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#ad7fa8" "#8cc4ff" "#eeeeec"])
- '(column-number-mode t)
- '(custom-enabled-themes (quote (tsdh-dark)))
- '(display-battery-mode t)
- '(display-time-mode t)
- '(inhibit-startup-screen t)
- '(scroll-bar-mode (quote nil))
- '(show-paren-mode t)
- '(tool-bar-mode nil))
+ '(newsticker-url-list (quote (("Arch Linux News" "https://www.archlinux.org/feeds/news" nil nil nil) ("Arch Linux AUR" "https://aur.archlinux.org/rss" nil nil nil) ("101 Great Goals" "http://www.101greatgoals.com/feed/?hl=en" nil nil nil) ("38 North" "http://feeds.feedburner.com/38North?format=xml?hl=en" nil nil nil) ("Chromium" "http://blog.chromium.org/feeds/posts/default" nil nil nil) ("IACR ePrint" "http://eprint.iacr.org/rss/rss.xml" nil nil nil) ("Planet Emacsen" "http://planet.emacsen.org/atom.xml" nil nil nil))))
+ '(newsticker-url-list-defaults (quote (("Emacs Wiki" "http://www.emacswiki.org/cgi-bin/wiki.pl?action=rss" nil 3600) ("slashdot" "http://slashdot.org/index.rss" nil 3600))))
+)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

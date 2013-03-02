@@ -1,38 +1,52 @@
-; configure package manager
-(require 'package)
-(add-to-list 'package-archives
-    '("marmalade" .
-        "http://marmalade-repo.org/packages/"))
-(package-initialize)
 
-; general config
-(global-hl-line-mode 1)                 ; highlight current line
 (setq-default indent-tabs-mode nil)     ; use spaces for tabs
 (setq make-backup-files nil)            ; disable backup files
-(line-number-mode 1)                    ; show line number
-(column-number-mode 1)                  ; show column number
-(setq-default fill-column 80)
-(global-linum-mode 1)
-(menu-bar-mode 0)
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
+(setq-default tab-width 8)
 
-(ido-mode 1)
+(delete-selection-mode t)
+
+;; (setq backup-directory-alist
+;;       `((".*" . ,temporary-file-directory)))
+;; (setq auto-save-file-name-transforms
+;;       `((".*" . ,temporary-file-directory t)))
+
+(global-auto-revert-mode t)
+
+(require 'windmove)
+(windmove-default-keybindings)
+
+(show-paren-mode t)
+
+(ido-mode t)
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
+      ido-create-new-buffer 'always
+      ido-use-filename-at-point 'guess
+      ido-max-prospects 10)
+
+(icomplete-mode t)
+
+(setq ispell-program-name "aspell"
+      ispell-extra-args '("--sug-mode=ultra"))
+(autoload 'flyspell-mode "flyspell" "On-the-fly spell-checker" t)
+
+(defun amaloz-enable-flyspell ()
+  (when (executable-find ispell-program-name)
+    (flyspell-mode t)))
 
 ; default to text-mode
 (setq-default major-mode 'text-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
+(add-hook 'text-mode-hook 'amaloz-enable-flyspell)
 
-; fix scrolling (maybe?)
-(setq scroll-margin 0 scroll-conservatively 10000
-  scroll-preserve-screen-position 1)
+(amaloz-global-mode t)
 
-(define-key global-map (kbd "RET") 'newline-and-indent)
+;; (define-key global-map (kbd "RET") 'newline-and-indent)
 
-(defun kill-and-join-forward (&optional arg)
-  (interactive "P")
-  (if (and (eolp) (not (bolp)))
-    (delete-indentation t)
-    (kill-line arg)))
-(global-set-key "\C-k" 'kill-and-join-forward)
+;; (defun kill-and-join-forward (&optional arg)
+;;   (interactive "P")
+;;   (if (and (eolp) (not (bolp)))
+;;     (delete-indentation t)
+;;     (kill-line arg)))
+;; (global-set-key "\C-k" 'kill-and-join-forward)
 
