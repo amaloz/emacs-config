@@ -16,7 +16,7 @@
 (column-number-mode t)
 (size-indication-mode t)
 
-(fset 'yes-or-no-p 'y-or-no-p)
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (setq-default fill-column 80)
 (global-linum-mode 1)

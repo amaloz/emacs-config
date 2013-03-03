@@ -43,7 +43,7 @@
 
 (amaloz-global-mode t)
 
-;; (define-key global-map (kbd "RET") 'newline-and-indent)
+
 
 ;; (defun kill-and-join-forward (&optional arg)
 ;;   (interactive "P")

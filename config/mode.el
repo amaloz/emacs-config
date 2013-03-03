@@ -2,6 +2,7 @@
 (defvar amaloz-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "C-c t") 'amaloz-visit-term-buffer)
+    (define-key global-map (kbd "RET") 'newline-and-indent)
     map)
   "")
 

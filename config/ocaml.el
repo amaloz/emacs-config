@@ -7,7 +7,7 @@
   (setq tuareg-interactive-program "utop")
   (setq show-trailing-whitespace t))
 
-(setq amaloz-ocaml-mode-hook 'amaloz-ocaml-mode-defauts)
+(setq amaloz-ocaml-mode-hook 'amaloz-ocaml-mode-defaults)
 
 (add-hook 'tuareg-mode-hook
           (lambda ()

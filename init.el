@@ -19,4 +19,4 @@
 (load "config/ocaml")
 
 ; start up emacs server
-;; (server-start)
+(server-start)
