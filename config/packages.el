@@ -5,7 +5,8 @@
 (package-initialize)
 
 ; make sure dash is installed before proceeding
-(or (package-installed-p 'dash) (package-install package))
+(if (not (package-installed-p 'dash))
+    (package-install 'dash))
 (require 'dash)
 
 (defvar amaloz-packages

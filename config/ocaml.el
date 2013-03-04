@@ -1,7 +1,7 @@
 ;; OCaml config
 ;; 01 March 2013
 
-(amaloz-ensure-module-deps '(tuareg))
+(amaloz-ensure-module-deps '(caml tuareg))
 
 (defun amaloz-ocaml-mode-defaults ()
   (setq tuareg-interactive-program "utop")
