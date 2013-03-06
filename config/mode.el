@@ -3,6 +3,10 @@
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "C-c t") 'amaloz-visit-term-buffer)
     (define-key global-map (kbd "RET") 'newline-and-indent)
+    (define-key map (kbd "C-c l") 'windmove-right)
+    (define-key map (kbd "C-c h") 'windmove-left)
+    (define-key map (kbd "C-c k") 'windmove-up)
+    (define-key map (kbd "C-c j") 'windmove-down)
     map)
   "")
 
