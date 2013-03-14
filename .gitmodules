@@ -1,3 +1,6 @@
 [submodule "vendor/pkgbuild-mode"]
 	path = vendor/pkgbuild-mode
 	url = https://github.com/stefanhusmann/pkgbuild-mode
+[submodule "vendor/erc-sasl"]
+	path = vendor/erc-sasl
+	url = https://github.com/joseph-gay/erc-sasl
