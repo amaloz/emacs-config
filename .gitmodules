@@ -1,0 +1,3 @@
+[submodule "vendor/erc-sasl"]
+	path = vendor/erc-sasl
+	url = https://github.com/joseph-gay/erc-sasl
