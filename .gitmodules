@@ -1,0 +1,3 @@
+[submodule "vendor/pkgbuild-mode"]
+	path = vendor/pkgbuild-mode
+	url = https://github.com/stefanhusmann/pkgbuild-mode
