@@ -26,5 +26,6 @@
 (load "config/erc")
 (load "config/latex")
 (load "config/ocaml")
+(load "config/org")
 (load "config/ruby")
 

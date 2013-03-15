@@ -1,14 +1,14 @@
 ;; OCaml config
 ;; 01 March 2013
 
-(amaloz-ensure-module-deps '(caml tuareg))
+(amaloz/ensure-module-deps '(caml tuareg))
 
-(defun amaloz-ocaml-mode-defaults ()
+(defun amaloz/ocaml-mode-defaults ()
   (setq tuareg-interactive-program "utop")
   (setq show-trailing-whitespace t))
 
-(setq amaloz-ocaml-mode-hook 'amaloz-ocaml-mode-defaults)
+(setq amaloz/ocaml-mode-hook 'amaloz/ocaml-mode-defaults)
 
 (add-hook 'tuareg-mode-hook
           (lambda ()
-            (run-hooks 'amaloz-ocaml-mode-hook)))
+            (run-hooks 'amaloz/ocaml-mode-hook)))

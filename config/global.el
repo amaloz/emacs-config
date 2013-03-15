@@ -32,18 +32,15 @@
       ispell-extra-args '("--sug-mode=ultra"))
 (autoload 'flyspell-mode "flyspell" "On-the-fly spell-checker" t)
 
-(defun amaloz-enable-flyspell ()
-  (when (executable-find ispell-program-name)
-    (flyspell-mode t)))
-
 ; default to text-mode
 (setq-default major-mode 'text-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
-(add-hook 'text-mode-hook 'amaloz-enable-flyspell)
+(add-hook 'text-mode-hook 'amaloz/enable-flyspell)
 
-(amaloz-global-mode t)
+; global key bindings
+(define-key global-map (kbd "RET") 'newline-and-indent)
 
-
+(amaloz/global-mode t)
 
 ;; (defun kill-and-join-forward (&optional arg)
 ;;   (interactive "P")

@@ -9,22 +9,22 @@
     (package-install 'dash))
 (require 'dash)
 
-(defvar amaloz-packages
+(defvar amaloz/packages
   '(flycheck flymake zenburn-theme)
   "packages required at launch.")
 
-(defun amaloz-packages-installed-p ()
-  (-all? #'package-installed-p amaloz-packages))
+(defun amaloz/packages-installed-p ()
+  (-all? #'package-installed-p amaloz/packages))
 
-(defun amaloz-install-packages ()
-  (unless (amaloz-packages-installed-p)
+(defun amaloz/install-packages ()
+  (unless (amaloz/packages-installed-p)
     (message "%s" "Refreshing package database...")
     (package-refresh-contents)
     (-each
-     (-reject #'package-installed-p amaloz-packages)
+     (-reject #'package-installed-p amaloz/packages)
      #'package-install)))
 
-(defun amaloz-ensure-module-deps (packages)
+(defun amaloz/ensure-module-deps (packages)
   (-each (-remove #'package-installed-p packages) #'package-install))
 
-(amaloz-install-packages)
+(amaloz/install-packages)
