@@ -25,8 +25,8 @@
                                   networks noncommands notify readonly ring
                                   services spelling stamp track truncate))
 
-     (setq erc-autojoin-channels-alist
-           '((".*\\.freenode.net" "#emacs" "#ocaml" "#crypto" "##umd-cs")))
+     (if (boundp 'private-erc-rooms)
+         (setq erc-autojoin-channels-alist private-erc-rooms))
      
      (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT"
                                      "301" ; away notice
