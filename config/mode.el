@@ -1,9 +1,22 @@
 ;;; amaloz mode config
 ;;; 15 March 2013
 
+(defun amaloz/enable-flyspell ()
+  (when (executable-find ispell-program-name)
+    (flyspell-mode t)))
+
+;; (defun amaloz/visit-term-buffer ()
+;;   (interactive)
+;;   (if (not (get-buffer "*ansi-term*"))
+;;       (progn
+;;         (split-window-sensibly (selected-window))
+;;         (other-window 1)
+;;         (ansi-term (getenv "SHELL")))
+;;     (switch-to-buffer-other-window "*ansi-term*")))
+
 (defvar amaloz/mode-map
   (let ((map (make-sparse-keymap)))
-    (define-key map (kbd "C-c t") 'amaloz-visit-term-buffer)
+    (define-key map (kbd "C-c t") 'amaloz/visit-term-buffer)
     (define-key map (kbd "C-c l") 'windmove-right)
     (define-key map (kbd "C-c h") 'windmove-left)
     (define-key map (kbd "C-c k") 'windmove-up)

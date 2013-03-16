@@ -1,9 +1,9 @@
 ;;; org mode
 ;;; 15 March 2013
 
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+;; (define-key global-map "\C-c l" 'org-store-link)
+(define-key global-map "\C-c a" 'org-agenda)
+(define-key global-map "\C-c b" 'org-iswitchb)
 
 (eval-after-load "org"
   '(progn

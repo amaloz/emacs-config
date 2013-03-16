@@ -1,4 +1,4 @@
-;; global config
+;; global configuration
 ;; 02 March 2013
 
 (setq-default indent-tabs-mode nil)     ; use spaces for tabs
@@ -41,6 +41,7 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 (amaloz/global-mode t)
+
 
 ;; (defun kill-and-join-forward (&optional arg)
 ;;   (interactive "P")
