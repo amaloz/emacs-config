@@ -28,6 +28,9 @@
 
 (icomplete-mode t)
 
+(electric-pair-mode +1)
+(electric-indent-mode +1)
+
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
 (autoload 'flyspell-mode "flyspell" "On-the-fly spell-checker" t)
@@ -38,7 +41,8 @@
 (add-hook 'text-mode-hook 'amaloz/enable-flyspell)
 
 ; global key bindings
-(define-key global-map (kbd "RET") 'newline-and-indent)
+;; (define-key global-map (kbd "RET") 'newline-and-indent)
+(global-set-key [(shift return)] 'amaloz/smart-open-line)
 
 (amaloz/global-mode t)
 

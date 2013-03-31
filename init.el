@@ -3,6 +3,7 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/elisp")
+(add-to-list 'load-path "~/.emacs.d/vendor/iy-go-to-char")
 
 (setq custom-file "~/.emacs.d/config/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
