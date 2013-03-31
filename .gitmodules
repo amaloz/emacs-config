@@ -4,3 +4,6 @@
 [submodule "vendor/erc-sasl"]
 	path = vendor/erc-sasl
 	url = https://github.com/joseph-gay/erc-sasl
+[submodule "vendor/iy-go-to-char"]
+	path = vendor/iy-go-to-char
+	url = https://github.com/emacsmirror/iy-go-to-char
