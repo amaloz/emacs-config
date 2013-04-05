@@ -28,5 +28,6 @@
 (load "config/latex")
 (load "config/ocaml")
 (load "config/org")
-(load "config/ruby")
+(load "config/proofgeneral")
+;; (load "config/ruby")
 ;; (load "config/wanderlust")
