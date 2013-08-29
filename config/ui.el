@@ -1,6 +1,8 @@
 ;; ui config
 ;; 02 March 2013
 
+(amaloz/ensure-module-deps '(solarized-theme))
+
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
@@ -22,4 +24,9 @@
 (global-linum-mode 1)
 (global-hl-line-mode 1)
 
-(load-theme 'zenburn t)
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+(load-theme 'solarized-dark t)
