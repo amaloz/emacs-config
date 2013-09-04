@@ -1,21 +1,24 @@
 ;; global configuration
 ;; 02 March 2013
 
+(amaloz/ensure-module-deps '(move-text pretty-mode-plus))
+
+(require 'move-text)
+(move-text-default-bindings)
+
+(require 'pretty-mode-plus)
+(pretty-mode t)
+
+(require 'windmove)
+(windmove-default-keybindings)
+
 (setq-default indent-tabs-mode nil)     ; use spaces for tabs
 (setq make-backup-files nil)            ; disable backup files
 (setq-default tab-width 8)
 
 (delete-selection-mode t)
 
-;; (setq backup-directory-alist
-;;       `((".*" . ,temporary-file-directory)))
-;; (setq auto-save-file-name-transforms
-;;       `((".*" . ,temporary-file-directory t)))
-
 (global-auto-revert-mode t)
-
-(require 'windmove)
-(windmove-default-keybindings)
 
 (show-paren-mode t)
 
@@ -41,16 +44,6 @@
 (add-hook 'text-mode-hook 'amaloz/enable-flyspell)
 
 ; global key bindings
-;; (define-key global-map (kbd "RET") 'newline-and-indent)
 (global-set-key [(shift return)] 'amaloz/smart-open-line)
 
 (amaloz/global-mode t)
-
-
-;; (defun kill-and-join-forward (&optional arg)
-;;   (interactive "P")
-;;   (if (and (eolp) (not (bolp)))
-;;     (delete-indentation t)
-;;     (kill-line arg)))
-;; (global-set-key "\C-k" 'kill-and-join-forward)
-

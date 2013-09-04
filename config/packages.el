@@ -10,7 +10,7 @@
 (require 'dash)
 
 (defvar amaloz/packages
-  '(flycheck flymake zenburn-theme)
+  '(flycheck flymake)
   "packages required at launch.")
 
 (defun amaloz/packages-installed-p ()
