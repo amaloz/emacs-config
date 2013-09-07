@@ -1,6 +1,7 @@
 ;;; amaloz mode config
 ;;; 15 March 2013
 
+(amaloz/ensure-module-deps '(iy-go-to-char))
 (require 'iy-go-to-char)
 
 (defvar amaloz/mode-map

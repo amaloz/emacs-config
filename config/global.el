@@ -1,8 +1,8 @@
 ;; global configuration
 ;; 02 March 2013
 
-(amaloz/ensure-module-deps
- '(dired+ dired-single move-text pretty-mode-plus))
+(amaloz/ensure-module-deps '(dired+ dired-single flycheck
+ flycheck-color-mode-line move-text pretty-mode-plus))
 
 (require 'dired-single)
 (require 'dired+)
@@ -31,6 +31,10 @@
         (message "Current directory is: %s" default-directory))))
 (global-set-key [(meta f5)] 'dired-single-toggle-buffer-name)
 
+(require 'flycheck)
+(require 'flycheck-color-mode-line)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 (require 'move-text)
 (move-text-default-bindings)
 
@@ -39,6 +43,7 @@
 
 (require 'windmove)
 (windmove-default-keybindings)
+
 
 (setq-default indent-tabs-mode nil)     ; use spaces for tabs
 (setq make-backup-files nil)            ; disable backup files

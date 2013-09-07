@@ -29,4 +29,4 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
-(load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
