@@ -3,7 +3,6 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/elisp")
-(add-to-list 'load-path "~/.emacs.d/vendor/iy-go-to-char")
 
 (setq custom-file "~/.emacs.d/config/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
@@ -18,9 +17,9 @@
 
 ;; specific modules (enable / disable as desired)
 (load "config/email")
-(load "config/erc")
+;; (load "config/erc")
 (load "config/latex")
 (load "config/ocaml")
-(load "config/org")
+;; (load "config/org")
 (load "config/prog")
-(load "config/proofgeneral")
+;; (load "config/proofgeneral")
