@@ -2,7 +2,8 @@
 ;; 02 March 2013
 
 (amaloz/ensure-module-deps '(dired+ dired-single flycheck
- flycheck-color-mode-line move-text pretty-mode-plus))
+ flycheck-color-mode-line hide-comnt move-text pretty-mode-plus
+ smart-mode-line))
 
 (require 'dired-single)
 (require 'dired+)
@@ -34,12 +35,20 @@
 (require 'flycheck)
 (require 'flycheck-color-mode-line)
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(eval-after-load 'flycheck
+  '(setq flycheck-checkers (delq 'emacs-lisp-checkdoc flycheck-checkers)))
+
+(require 'hide-comnt)
 
 (require 'move-text)
 (move-text-default-bindings)
 
 (require 'pretty-mode-plus)
 (pretty-mode t)
+
+(require 'smart-mode-line)
+(if after-init-time (sml/setup)
+  (add-hook 'after-init-hook 'sml/setup))
 
 (require 'windmove)
 (windmove-default-keybindings)

@@ -1,5 +1,5 @@
-;; LaTeX config
-;; 02 March 2013
+;;; LaTeX config
+;;; 02 March 2013
 
 (amaloz/ensure-module-deps '(auctex cdlatex))
 
