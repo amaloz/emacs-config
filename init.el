@@ -2,7 +2,7 @@
 ;; 01 March 2013
 
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/elisp")
+;; (add-to-list 'load-path "~/.emacs.d/elisp")
 
 (setq custom-file "~/.emacs.d/config/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
@@ -15,7 +15,9 @@
 (load "config/mode")
 (load "config/global")
 
+;;
 ;; specific modules (enable / disable as desired)
+;;
 (load "config/email")
 (load "config/latex")
 ;; (load "config/lisp")

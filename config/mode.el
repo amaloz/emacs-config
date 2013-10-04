@@ -9,6 +9,9 @@
     (define-key map (kbd "C-c s") 'amaloz/duckduckgo)
     (define-key map (kbd "C-c t") 'amaloz/visit-term-buffer)
 
+    (define-key map (kbd "C-c m") 'helm-mini)
+    ;; (define-key map (kbd "C-x C-f") 'helm-find-files)
+
     (define-key map (kbd "C-c l") 'windmove-right)
     (define-key map (kbd "C-c h") 'windmove-left)
     (define-key map (kbd "C-c k") 'windmove-up)
@@ -20,6 +23,8 @@
     (define-key map (kbd "C-c ;") 'iy-go-to-char-continue)
     (define-key map (kbd "C-c ,") 'iy-go-to-char-continue-backward)
     (define-key map (kbd "C-c C") 'hide/show-comments-toggle)
+
+    (define-key map (kbd "M 1") 'shell-command)
     map)
   "")
 

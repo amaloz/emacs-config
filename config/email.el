@@ -1,11 +1,13 @@
 
-(setq auto-mode-alist
-      (append '(("~/.mutt/tmp/mutt-*". mail-mode))
-              auto-mode-alist))
+(amaloz/ensure-module-deps '(muttrc-mode))
 
-(autoload 'muttrc-mode "muttrc-mode.elc"
-  "Major mode to edit muttrc files" t)
+(require 'muttrc-mode)
 
-(setq auto-mode-alist
-      (append '(("muttrc\\'" . muttrc-mode))
-              auto-mode-alist))
+(add-to-list 'auto-mode-alist '("mutt-*" . mail-mode))
+(add-to-list 'auto-mode-alist '("muttrc\\'" . muttrc-mode))
+
+(defun my-mail-mode-hook ()
+  (auto-fill-mode 1)
+  (abbrev-mode 1)
+  (local-set-key "\C-Xk" 'server-edit))
+(add-hook 'mail-mode-hook 'my-mail-mode-hook)

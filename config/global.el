@@ -1,9 +1,16 @@
 ;; global configuration
 ;; 02 March 2013
 
-(amaloz/ensure-module-deps '(dired+ dired-single flycheck
- flycheck-color-mode-line hide-comnt move-text pretty-mode-plus
- smart-mode-line))
+(amaloz/ensure-module-deps '(dired+
+                             dired-single
+                             flycheck
+                             flycheck-color-mode-line
+                             git-commit-mode
+                             helm
+                             hide-comnt
+                             move-text
+                             pretty-mode-plus
+                             smart-mode-line))
 
 (require 'dired-single)
 (require 'dired+)
@@ -16,6 +23,7 @@
   (define-key dired-mode-map "^"
     (function
      (lambda nil (interactive) (dired-single-buffer "..")))))
+
 ;; if dired's already loaded, then the keymap will be bound
 (if (boundp 'dired-mode-map)
     ;; we're good to go; just add our bindings
@@ -37,6 +45,8 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (eval-after-load 'flycheck
   '(setq flycheck-checkers (delq 'emacs-lisp-checkdoc flycheck-checkers)))
+
+(require 'helm-config)
 
 (require 'hide-comnt)
 
@@ -79,6 +89,8 @@
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
 (autoload 'flyspell-mode "flyspell" "On-the-fly spell-checker" t)
+
+(add-hook 'git-commit-mode-hook 'flyspell-mode-on)
 
 ; default to text-mode
 (setq-default major-mode 'text-mode)
