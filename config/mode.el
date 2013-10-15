@@ -24,7 +24,7 @@
     (define-key map (kbd "C-c ,") 'iy-go-to-char-continue-backward)
     (define-key map (kbd "C-c C") 'hide/show-comments-toggle)
 
-    (define-key map (kbd "M 1") 'shell-command)
+    (define-key map (kbd "M-1") 'shell-command)
     map)
   "")
 
