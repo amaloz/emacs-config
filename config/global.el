@@ -83,8 +83,14 @@
 
 (icomplete-mode t)
 
-(electric-pair-mode +1)
-(electric-indent-mode +1)
+(electric-pair-mode t)
+(defun electric-indent-ignore-python (char)
+  "Ignore electric indentation for python-mode"
+  (if (equal major-mode 'python-mode)
+      `no-indent'
+    t))
+(add-to-list 'electric-indent-functions 'electric-indent-ignore-python)
+(electric-indent-mode t)
 
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
