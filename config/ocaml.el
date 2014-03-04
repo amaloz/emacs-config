@@ -9,6 +9,9 @@
 
 (defun amaloz/ocaml-mode-defaults ()
   (setq tuareg-interactive-program "utop")
+  (setq tuareg-in-indent 0)
+  (setq tuareg-default-indent 2)
+  (setq default-tab-width 2)
   (setq show-trailing-whitespace t))
 
 (setq amaloz/ocaml-mode-hook 'amaloz/ocaml-mode-defaults)
