@@ -1,8 +1,10 @@
 ;; global configuration
 ;; 02 March 2013
 
-(amaloz/ensure-module-deps '(dired+
+(amaloz/ensure-module-deps '(auto-complete
+                             dired+
                              dired-single
+                             fill-column-indicator
                              flycheck
                              flycheck-color-mode-line
                              git-commit-mode
@@ -74,12 +76,24 @@
 
 (show-paren-mode t)
 
+(require 'ido)
 (ido-mode t)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-create-new-buffer 'always
       ido-use-filename-at-point 'guess
       ido-max-prospects 10)
+
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(require 'auto-complete-config)
+(ac-config-default)
+(global-auto-complete-mode t)
+
+(require 'fill-column-indicator)
+(define-globalized-minor-mode
+  global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode t)
 
 (icomplete-mode t)
 
