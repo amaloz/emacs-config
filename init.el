@@ -2,7 +2,6 @@
 ;; 01 March 2013
 
 (add-to-list 'load-path "~/.emacs.d")
-;; (add-to-list 'load-path "~/.emacs.d/elisp")
 
 (setq custom-file "~/.emacs.d/config/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
@@ -22,7 +21,6 @@
 (load "config/email")
 (load "config/git")
 (load "config/latex")
-;; (load "config/lisp")
 (load "config/ocaml")
 (load "config/prog")
 (load "config/python")

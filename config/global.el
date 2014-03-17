@@ -8,7 +8,6 @@
                              flycheck
                              flycheck-color-mode-line
                              git-commit-mode
-                             helm
                              hide-comnt
                              move-text
                              pretty-mode-plus
@@ -47,8 +46,6 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (eval-after-load 'flycheck
   '(setq flycheck-checkers (delq 'emacs-lisp-checkdoc flycheck-checkers)))
-
-(require 'helm-config)
 
 (require 'hide-comnt)
 
