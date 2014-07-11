@@ -1,5 +1,4 @@
 ;; OCaml config
-;; 01 March 2013
 
 (amaloz/ensure-module-deps '(merlin tuareg utop))
 
