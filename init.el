@@ -19,8 +19,7 @@
 ;;
 (load "config/c")
 (load "config/email")
-(load "config/git")
 (load "config/latex")
 (load "config/ocaml")
 (load "config/prog")
-(load "config/python")
+;; (load "config/python")

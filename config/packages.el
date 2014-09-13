@@ -12,7 +12,7 @@
 (require 'dash)
 
 (defvar amaloz/packages
-  '(flycheck flymake)
+  '(flycheck)
   "packages required at launch.")
 
 (defun amaloz/packages-installed-p ()

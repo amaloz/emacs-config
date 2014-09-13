@@ -2,8 +2,8 @@
 ;;; 15 March 2013
 
 ;; (define-key global-map "\C-c l" 'org-store-link)
-(define-key global-map "\C-c a" 'org-agenda)
-(define-key global-map "\C-c b" 'org-iswitchb)
+(define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cb" 'org-iswitchb)
 
 (eval-after-load "org"
   '(progn
@@ -26,5 +26,4 @@
                (lambda ()
                  (run-hooks 'amaloz-org-mode-hook)))
      ))
-
 (require 'org)
