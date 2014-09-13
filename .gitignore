@@ -1,5 +1,7 @@
 auto-save-list/
+elisp/
 elpa/
+eshell/
 url/
 abbrev_defs
 ac-comphist.dat
