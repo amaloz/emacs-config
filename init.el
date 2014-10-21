@@ -1,25 +1,28 @@
 ;; amaloz's emacs init.el file
 ;; 01 March 2013
 
-(add-to-list 'load-path "~/.emacs.d")
+(package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/config")
 
 (setq custom-file "~/.emacs.d/config/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
+(load-theme 'solarized-light t)
 
-(load "config/private" t)
-(load "config/packages")
+(load "private" t)
+(load "packages")
 
-(load "config/ui")
-(load "config/functions")
-(load "config/mode")
-(load "config/global")
+(load "ui")
+(load "functions")
+(load "mode")
+(load "global")
 
 ;;
 ;; specific modules (enable / disable as desired)
 ;;
-(load "config/c")
-(load "config/email")
-(load "config/latex")
-(load "config/ocaml")
-(load "config/prog")
-;; (load "config/python")
+(load "c")
+(load "email")
+(load "latex")
+(load "ocaml")
+(load "prog")
+(load "python")
