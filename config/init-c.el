@@ -1,7 +1,7 @@
 ;; C config
 ;; 12 November 2013
 
-(amaloz/ensure-module-deps '(auto-complete-clang ecb yasnippet))
+(amaloz/ensure-module-deps '(yasnippet auto-complete-clang ecb))
 
 (require 'cc-mode)
 (require 'yasnippet)

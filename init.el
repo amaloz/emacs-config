@@ -9,20 +9,27 @@
 (when (file-exists-p custom-file) (load custom-file))
 (load-theme 'solarized-light t)
 
-(load "private" t)
-(load "packages")
+(load "init-private" t)
+(load "init-packages")
 
-(load "ui")
-(load "functions")
-(load "mode")
-(load "global")
+(load "init-ui")
+(load "init-funcs")
+(load "init-mode")
+
+(load "init-utils")
+
+(load "init-dired")
+(load "init-flycheck")
+(load "init-flyspell")
+(load "init-ido")
+(load "init-misc")
 
 ;;
 ;; specific modules (enable / disable as desired)
 ;;
-(load "c")
-(load "email")
-(load "latex")
-(load "ocaml")
-(load "prog")
-(load "python")
+(load "init-c")
+(load "init-email")
+(load "init-latex")
+(load "init-ocaml")
+(load "init-prog")
+(load "init-python")
