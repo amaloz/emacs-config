@@ -18,11 +18,13 @@
 
 (load "init-utils")
 
+(load "init-auto-complete")
 (load "init-dired")
 (load "init-flycheck")
 (load "init-flyspell")
 (load "init-ido")
 (load "init-misc")
+(load "init-yasnippet")
 
 ;;
 ;; specific modules (enable / disable as desired)

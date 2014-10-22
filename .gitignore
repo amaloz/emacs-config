@@ -5,4 +5,4 @@ eshell/
 url/
 abbrev_defs
 ac-comphist.dat
-private.el
+init-private.el
