@@ -34,4 +34,5 @@
 (load "init-latex")
 (load "init-ocaml")
 (load "init-prog")
+(load "init-proofgeneral")
 (load "init-python")
