@@ -1,11 +1,24 @@
-(amaloz/ensure-module-deps '(python-mode))
+(amaloz/ensure-module-deps '(pydoc-info python-mode))
+
+(require 'python)
+(require 'pydoc-info)
+
+(setq
+ show-trailing-whitespace t
+ python-shell-interpreter "ipython2"
+ python-shell-interpreter-args "--gui=wx --matplotlib=wx --colors=Linux"
+ python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+ python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+ python-shell-completion-setup-code
+ "from IPython.core.completerlib import module_completion"
+ python-shell-completion-module-string-code
+ "';'.join(module_completion('''%s'''))\n"
+ python-shell-completion-string-code
+ "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
 (defun amaloz/python-mode-defaults ()
-  (setq show-trailing-whitespace t)
-  (setq-default py-shell-name "ipython2")
-  (setq-default py-which-bufname "IPython2")
-  ;; XXX: disable flycheck mode for now
-  (flycheck-mode 0)
+  ;; ;; XXX: disable flycheck mode for now
+  ;; (flycheck-mode 0)
   (local-set-key (kbd "C-M-n") 'py-down-block)
   (local-set-key (kbd "C-M-p") 'py-up-block)
   )
