@@ -12,7 +12,8 @@
 (require 'ocp-indent)
 (require 'merlin)
 
-(add-to-list 'exec-path "/home/amaloz/.opam/system/bin")
+(add-to-list 'exec-path (substring (shell-command-to-string
+                                    "opam config var bin 2> /dev/null") 0 -1))
 
 ;; Enable auto-complete
 (setq merlin-use-auto-complete-mode 'easy)
