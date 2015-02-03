@@ -8,6 +8,7 @@
 
 (setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
 (autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
+(autoload 'merlin-mode "merlin" "Merlin mode" t)
 
 (require 'ocp-indent)
 (require 'merlin)
