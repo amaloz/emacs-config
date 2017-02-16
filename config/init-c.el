@@ -20,3 +20,6 @@
   (define-key c++-mode-map (kbd "C-S-<return>") 'ac-complete-clang)
   )
 
+(add-hook 'c-mode-common-hook
+          (lambda()
+            (c-set-offset 'inextern-lang 0)))

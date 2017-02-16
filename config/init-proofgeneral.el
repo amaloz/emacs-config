@@ -1,5 +1,5 @@
 
-(load-file "/usr/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
+(load-file "/home/amaloz/.opam/system/share/ec-proofgeneral/generic/proof-site.el")
 
 (defun amaloz/coq-mode-defaults ()
   (setq coq-compile-before-require t)
