@@ -32,6 +32,7 @@
 ;;
 (load "init-c")
 ;; (load "init-email")
+(load "init-julia")
 (load "init-latex")
 (load "init-ocaml")
 (load "init-prog")
